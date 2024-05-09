@@ -1,0 +1,15 @@
+{% extends "home.html" %}
+{% block content %}
+<h1>{{name|default:"addition"}}</h1>
+
+<form action="add" method='post'>
+{% csrf_token %}
+
+    <input type="text" name='name' placeholder='number1'><br><br>
+    <input type="email" name='email' placeholder='email'></br><br>
+    <input type="password" name='pass1' placeholder='enter password'><br><br>
+    <input type="password" name='name' placeholder='re enter'><br><br>
+    <input type="submit" value='submit'>
+
+</form>
+{% endblock %}
